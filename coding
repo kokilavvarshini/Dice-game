@@ -1,0 +1,25 @@
+import random
+sum1=0
+sum2=0
+a=input("do you want to roll the dice(yes or no):")
+n = eval(input("maximum score:"))
+if a == "yes" or a == "YES":
+    print("computer player")
+    while sum1 < n or sum2 < n:
+        b=random.randint(1,6)
+        sum1+=b
+        print(b,end="      ")
+        c = eval(input())
+        sum2+=c
+    print(sum1,end="     ")
+    print(sum2)
+    if sum1 > sum2:
+        print("you lost")
+        print("Game over!!")
+    elif sum1 == sum2:
+        print("draw")
+    else:
+        print("you won")
+        print("Game over!!")
+else:
+    print("--Sorry!! you can't play the game--")
